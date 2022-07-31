@@ -1,7 +1,7 @@
 package internal
 
 import (
-	api "github.com/antiartificial/bookservice/api/v1"
+	api "github.com/antiartificial/book-service/api/v1"
 	"google.golang.org/grpc"
 )
 
