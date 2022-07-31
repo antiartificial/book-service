@@ -20,6 +20,6 @@ type BookRepository interface {
 	CreateBook(ctx context.Context, book *Book) (BookId, error)
 	RetrieveBook(ctx context.Context, bid BookId) (*Book, error)
 	UpdateBook(ctx context.Context, book *Book) error
-	DeleteBook(ctx context.Context, bid BookId)
+	DeleteBook(ctx context.Context, bid BookId) error
 	ListBook(ctx context.Context, offset int64, limit int64) ([]*Book, error)
 }

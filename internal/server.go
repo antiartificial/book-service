@@ -30,7 +30,7 @@ func (s *grpcServer) CreateBook(ctx context.Context, req *api.CreateBookRequest)
 		Author:      req.Book.GetAuthor(),
 		Description: req.Book.GetDescription(),
 		Language:    req.Book.GetLanguage(),
-		FinishTine:  req.Book.GetFinishTime().AsTime(),
+		FinishTime:  req.Book.GetFinishTime().AsTime(),
 	}
 	bid, error := s.BookRepository.CreateBook(ctx, book)
 	if error != nil {
@@ -51,7 +51,7 @@ func (s *grpcServer) RetrieveBook(ctx context.Context, req *api.RetrieveBookRequ
 			Author:      book.Author,
 			Description: book.Description,
 			Language:    book.Language,
-			FinishTime:  timestamppb.New(book.FinishTine),
+			FinishTime:  timestamppb.New(book.FinishTime),
 		},
 	}
 	return res, nil
