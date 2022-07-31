@@ -13,7 +13,7 @@ type Book struct {
 	Author      string    `json:"author"`
 	Description string    `json:"description"`
 	Language    string    `json:"language"`
-	FinishTine  time.Time `json:"finishTime"`
+	FinishTime  time.Time `json:"finishTime"`
 }
 
 type BookRepository interface {
